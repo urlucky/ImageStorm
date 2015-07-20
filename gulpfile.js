@@ -1,52 +1,65 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var concat = require('gulp-concat');
+var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
+var opn = require('opn');
 
 var cssPath = [
-    './vendor/webuploader_fex/dist/webuploader.css',
     './assets/css/**/*'
 ];
 
 var jsPath = [
-    './vendor/jquery/dist/jquery.js',
-    './vendor/webuploader_fex/dist/webuploader.js',
-    './assets/js/**/*'
+    './assets/js/*.js'
 ];
 
-gulp.task('css', function () {
+gulp.task('css', function() {
     gulp.src(cssPath)
+        .pipe(plumber())
         .pipe(sass())
-        .pipe(concat('all.css'))
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('js', function () {
+gulp.task('js', function() {
     gulp.src(jsPath)
-        .pipe(concat('all.js'))
+        .pipe(concat('main.js'))
         .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch('assets/css/**/*', ['css']);
-    gulp.watch('assets/js/**/*', ['js']);
-});
-
-gulp.task('build', function () {
+gulp.task('build', function() {
     gulp.start(['css', 'js']);
 });
 
-gulp.task('nodemon', function () {
-    nodemon({
+gulp.task('serve', function() {
+    return nodemon({
         script: './bin/www',
-        ext: 'sass js',
+        ext: 'js',
         env: {
             'NODE_ENV': 'development'
-        }
+        },
+        watch: ['app.js', './routes', './bin']
     });
 });
 
-gulp.task('default', function () {
-    gulp.start('watch');
-    gulp.start('nodemon');
+gulp.task('livereload', function() {
+    livereload.listen();
+    gulp.watch('**/*.scss', function(event) {  
+        gulp.run('css');
+        livereload.reload();
+    });
+    gulp.watch(['**/*.jade', '**/*.js'], function(event) {  
+        livereload.reload();
+    });
+});
+
+gulp.task('openbrowser', function() {
+    opn('http://localhost:3000');
+});
+
+gulp.task('default', function() {
+    gulp.start('serve');
+    gulp.start('livereload');
+    gulp.start('openbrowser');
 });
