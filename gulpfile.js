@@ -42,7 +42,8 @@ gulp.task('nodemon', function () {
         ext: 'sass js',
         env: {
             'NODE_ENV': 'development'
-        }
+        },
+        watch: ['app.js', './routes', './bin']
     });
 });
 
