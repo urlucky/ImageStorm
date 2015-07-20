@@ -1,0 +1,8 @@
+{
+  "name": "ImageStorm",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "webuploader_fex": "~0.1.5"
+  }
+}
