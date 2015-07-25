@@ -1,5 +1,273 @@
 extends layout
 
 block content
-    h1= title
-    p Welcome to #{title}
+    aside
+      header 照片管理器
+      .btns-wrapper
+        a.add-btn.newcate-btn 新建相册
+        a.add-btn.imgupload-btn 上传图片
+      ul.cates
+        li.cate(draggable="false")
+          span.cate-name 全部
+          span.cate-num (1993)
+        li.cate.active(draggable="true")
+          span.cate-name 人物
+          span.cate-num (234)
+          p.cate-edit
+            i.iconfont.edit &#58953;
+            i.iconfont.delete &#59060;
+        li.cate(draggable="true")
+          span.cate-name 风光
+          span.cate-num (12)
+          p.cate-edit
+            i.iconfont.edit &#58953;
+            i.iconfont.delete &#59060;
+        li.cate(draggable="true")
+          span.cate-name 私房
+          span.cate-num (198)
+          p.cate-edit
+            i.iconfont.edit &#58953;
+            i.iconfont.delete &#59060;
+        li.cate(draggable="true")
+          span.cate-name 纪实
+          span.cate-num (234)
+          p.cate-edit
+            i.iconfont.edit &#58953;
+            i.iconfont.delete &#59060;
+        li.cate(draggable="true")
+          span.cate-name 野生动物
+          span.cate-num (1200)
+          p.cate-edit
+            i.iconfont.edit &#58953;
+            i.iconfont.delete &#59060;
+    article
+      .container
+        ul.list-wrapper
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+          li.img-wrapper(draggable="true")
+            img.img-thumbnail(src="http://wallpapers.wallhaven.cc/wallpapers/thumb/small/th-171500.jpg")
+            .img-info
+              span.img-name img-name1
+              a.img-edit-btn
+                span.dot
+                span.dot
+                span.dot
+            ul.img-edit
+              li.edit
+                i.iconfont &#58953;
+                | 编辑
+              li.delete
+                i.iconfont &#59060;
+                | 删除
+    #newcate-dialog.dialog.newcate
+      span.close-btn x
+      .hd
+        p.dialog-title 新建相册
+      .bd
+        input.newcate-input(type="text", placeholder="请输入相册名字")
+      .ft
+        button.confirm-btn 确定
+    #picupload-dialog.dialog.picupload
+      span.close-btn x
+      .hd
+        p.dialog-title 上传图片
+      .bd
+        #uploader-demo
+          #fileList.uploader-list
+          #filePicker 选择图片
+      .ft
+        button.confirm-btn 确定
