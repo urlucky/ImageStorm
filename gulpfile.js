@@ -59,6 +59,7 @@ gulp.task('livereload', function() {
         livereload.reload(file);
     });
     gulp.watch(['**/*.jade', '**/*.js'], function(file) {  
+        gulp.run('js');
         livereload.reload(file);
     });
 });
