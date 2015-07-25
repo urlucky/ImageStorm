@@ -206,5 +206,5 @@ body {
                   background-color: #f78755; }
               body article .container .list-wrapper .img-wrapper .img-edit li i {
                 margin: 0 20px; }
-      body article .container .placeholder {
-        outline: 2px dashed #ccc; }
+  body .placeholder {
+    outline: 2px dashed #ccc; }
